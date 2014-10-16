@@ -1722,5 +1722,139 @@
             }
         ],
         "description": "Simple OOP cURL wrapper."
+    },
+    {
+        "name": "paste/pre",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paste/Pre.php.git",
+            "reference": "bf47c87c8fd8f1f75d6b2a3235ee072bb45a5842"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paste/Pre.php/zipball/bf47c87c8fd8f1f75d6b2a3235ee072bb45a5842",
+            "reference": "bf47c87c8fd8f1f75d6b2a3235ee072bb45a5842",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2013-06-12 03:56:57",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Paste": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Aaron Oxborrow",
+                "email": "aaron@pastelabs.com",
+                "homepage": "http://pastelabs.com/",
+                "role": "Developer"
+            }
+        ],
+        "description": "A handsome replacement for print_r & var_dump. Debugging output with understated style.",
+        "homepage": "https://github.com/paste/Pre.php",
+        "keywords": [
+            "debug",
+            "dump",
+            "pre",
+            "pretty",
+            "print",
+            "print_r",
+            "var_dump"
+        ]
+    },
+    {
+        "name": "badcow/lorem-ipsum",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/samuelwilliams/LoremIpsum.git",
+            "reference": "568f94bada0f7c95f69fabd6e7007148f90c31b0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/samuelwilliams/LoremIpsum/zipball/568f94bada0f7c95f69fabd6e7007148f90c31b0",
+            "reference": "568f94bada0f7c95f69fabd6e7007148f90c31b0",
+            "shasum": ""
+        },
+        "time": "2013-03-05 07:52:52",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Badcow": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sam Williams",
+                "email": "sam@badcow.co"
+            },
+            {
+                "name": "Mathew Tinsley",
+                "email": "tinsley@tinsology.net"
+            }
+        ],
+        "description": "Lorem ipsum generator."
+    },
+    {
+        "name": "xi/randomstring",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xi-project/xi-randomstring.git",
+            "reference": "638650e5721e0766c87ab6ce2524bd355e1590bf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xi-project/xi-randomstring/zipball/638650e5721e0766c87ab6ce2524bd355e1590bf",
+            "reference": "638650e5721e0766c87ab6ce2524bd355e1590bf",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2012-10-31 10:15:32",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Xi\\RandomString": "library/",
+                "Xi\\RandomString\\Tests": "tests/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD"
+        ],
+        "authors": [
+            {
+                "name": "Mikko Forsström",
+                "email": "pekkisx@gmail.com",
+                "homepage": "http://diktaattoriporssi.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Random string generator",
+        "homepage": "http://github.com/xi-project/xi-randomstring",
+        "keywords": [
+            "tool"
+        ]
     }
 ]

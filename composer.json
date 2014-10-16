@@ -6,7 +6,10 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"anlutro/curl": "dev-master"
+		"anlutro/curl": "dev-master",
+		"paste/pre": "dev-master",
+		"badcow/lorem-ipsum": "dev-master",
+		"xi/randomstring": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

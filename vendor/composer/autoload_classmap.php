@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Badcow\\LoremIpsum\\Extensions\\TwigExtension' => $vendorDir . '/badcow/lorem-ipsum/lib/Badcow/LoremIpsum/Extensions/TwigExtension.php',
+    'Badcow\\LoremIpsum\\Generator' => $vendorDir . '/badcow/lorem-ipsum/lib/Badcow/LoremIpsum/Generator.php',
+    'Badcow\\LoremIpsum\\Statistics' => $vendorDir . '/badcow/lorem-ipsum/lib/Badcow/LoremIpsum/Statistics.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -680,6 +683,7 @@ return array(
     'PHPParser_TemplateLoader' => $vendorDir . '/nikic/php-parser/lib/PHPParser/TemplateLoader.php',
     'PHPParser_Unserializer' => $vendorDir . '/nikic/php-parser/lib/PHPParser/Unserializer.php',
     'PHPParser_Unserializer_XML' => $vendorDir . '/nikic/php-parser/lib/PHPParser/Unserializer/XML.php',
+    'Paste\\Pre' => $vendorDir . '/paste/pre/src/Paste/Pre.php',
     'Patchwork\\PHP\\Shim\\Iconv' => $vendorDir . '/patchwork/utf8/class/Patchwork/PHP/Shim/Iconv.php',
     'Patchwork\\PHP\\Shim\\Intl' => $vendorDir . '/patchwork/utf8/class/Patchwork/PHP/Shim/Intl.php',
     'Patchwork\\PHP\\Shim\\Mbstring' => $vendorDir . '/patchwork/utf8/class/Patchwork/PHP/Shim/Mbstring.php',
@@ -1589,6 +1593,7 @@ return array(
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+    'Xi\\RandomString\\RandomStringGenerator' => $vendorDir . '/xi/randomstring/library/Xi/RandomString/RandomStringGenerator.php',
     'anlutro\\cURL\\Laravel\\cURL' => $vendorDir . '/anlutro/curl/src/Laravel/cURL.php',
     'anlutro\\cURL\\Laravel\\cURLServiceProvider' => $vendorDir . '/anlutro/curl/src/Laravel/cURLServiceProvider.php',
     'anlutro\\cURL\\Request' => $vendorDir . '/anlutro/curl/src/Request.php',
