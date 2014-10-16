@@ -40,6 +40,7 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
+    'FakerProvider\\Person' => $baseDir . '/app/models/Person.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -1588,4 +1589,9 @@ return array(
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+    'anlutro\\cURL\\Laravel\\cURL' => $vendorDir . '/anlutro/curl/src/Laravel/cURL.php',
+    'anlutro\\cURL\\Laravel\\cURLServiceProvider' => $vendorDir . '/anlutro/curl/src/Laravel/cURLServiceProvider.php',
+    'anlutro\\cURL\\Request' => $vendorDir . '/anlutro/curl/src/Request.php',
+    'anlutro\\cURL\\Response' => $vendorDir . '/anlutro/curl/src/Response.php',
+    'anlutro\\cURL\\cURL' => $vendorDir . '/anlutro/curl/src/cURL.php',
 );
