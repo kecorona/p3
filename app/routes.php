@@ -13,44 +13,23 @@
 
 Route::resource('/', 'HomeController');
 
-Route::get('pages.random_users', function() {
-	return View::make('pages.random_users');
+Route::post('/random_users', 'UserController@showUsers');
+
+Route::post('/lorem_ipsum', 'LoremIpsumController@showLorem');
+
+Route::get('/random_users', function() {
+	return View::make('random_users');
 });
 
-Route::post('pages.random_users', function()
-{   //set variables
-    $email = Input::get('email');
-    $bio = Input::get('bio');
-    $user_count = Input::get('user_count');
-
-    
-
-    $faker = Faker::create();
-    $results = '';
-
-    //process form information submitted by user
-    for($i = 0; $i <= $user_count; $i++) {
-        $results[] = '<p>'.$faker->name.'<br>';
-        if(isset($_POST['email'])) {
-				$results .= $faker->email.'<br>';
-			}
-			if(isset($_POST["bio"])) {
-				$results .= $faker->paragraph[1].'<br>';
-			}
-		}
-
-        return View::make('pages.random_users')->with('results', $results));
-    
-    
-
-  
+Route::post('/random_users/{results?}', function($results) {  
+    return View::make('random_users')->with('results', $results);
 
 });
 
-Route::get('pages.lorem_ipsum', function() {
-    return View::make('pages.lorem_ipsum');
+Route::get('/lorem_ipsum', function() {
+    return View::make('lorem_ipsum');
 });
 
-Route::post('pages.lorem_ipsum', function() {
-    return View::make('pages.lorem_ipsum');
+Route::post('/lorem_ipsum', function() {
+    return View::make('lorem_ipsum');
 });

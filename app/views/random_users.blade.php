@@ -20,7 +20,6 @@
 				<div class="uk-width-1-1">
 					<fieldset data-uk-margin>
 						<legend>Number of Users</legend>
-						{{ Form::hidden('random_users', '1')}}
 						{{ Form::label('user_count', '',['name' => 'user_count', 'class' => 'uk-form-control'])}}
 						{{ Form::text('user_count', '1', ['name' => 'user_count']); }}
 

@@ -19,7 +19,7 @@ class HomeController extends BaseController {
  
 	public function index()
 	{
-		$this->layout->content = View::make('dashboard');
+		$this->layout->content = View::make('index');
 	}
  
 }

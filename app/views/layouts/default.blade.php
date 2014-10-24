@@ -30,12 +30,16 @@
     </div>
             
 
-        <div class="uk-container-center" style="background-image:url('img/top_bg.png'); background-repeat: repeat-x; height:50px">
+        <div class="uk-container" style="background-image:url('img/top_bg.png'); background-repeat: repeat-x; height:50px">
 
 
 				  @yield('content')
 
 	       </div>
+
+           <div class="uk-container">
+            @yield('results')
+            </div>
 
 	<footer class="uk-container">
 
