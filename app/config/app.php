@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => '4EjRUSyR3tikCmoxgsmV6b4YQkZOu3vg',
+	'key' => 'Mn0zDyVHPSiQpq85rjvOltz7Zk77Fpto',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -122,6 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+		'Way\Generators\GeneratorsServiceProvider',
+
 	),
 
 	/*
@@ -163,6 +165,7 @@ return array(
 		'DB'                => 'Illuminate\Support\Facades\DB',
 		'Eloquent'          => 'Illuminate\Database\Eloquent\Model',
 		'Event'             => 'Illuminate\Support\Facades\Event',
+		'Faker'				=> 'Faker\Factory',
 		'File'              => 'Illuminate\Support\Facades\File',
 		'Form'              => 'Illuminate\Support\Facades\Form',
 		'Hash'              => 'Illuminate\Support\Facades\Hash',
@@ -173,11 +176,13 @@ return array(
 		'Mail'              => 'Illuminate\Support\Facades\Mail',
 		'Paginator'         => 'Illuminate\Support\Facades\Paginator',
 		'Password'          => 'Illuminate\Support\Facades\Password',
+		'Pre'             	=> 'Paste\Pre',
 		'Queue'             => 'Illuminate\Support\Facades\Queue',
 		'Redirect'          => 'Illuminate\Support\Facades\Redirect',
 		'Redis'             => 'Illuminate\Support\Facades\Redis',
 		'Request'           => 'Illuminate\Support\Facades\Request',
 		'Response'          => 'Illuminate\Support\Facades\Response',
+		'RndStr'          	=> 'Xi\RandomString\RandomStringGenerator',
 		'Route'             => 'Illuminate\Support\Facades\Route',
 		'Schema'            => 'Illuminate\Support\Facades\Schema',
 		'Seeder'            => 'Illuminate\Database\Seeder',
