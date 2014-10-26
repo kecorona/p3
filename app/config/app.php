@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://p3.kristincorona.com/public',
+	'url' => 'p3.kristincorona.com',
 
 	/*
 	|--------------------------------------------------------------------------
