@@ -13,37 +13,45 @@ class UserController extends BaseController {
 	|	Route::get(pages.random_users', 'UserController@show');
 	|
 	*/
-	/**
-	 *  
-	 *	@return Array $results
-	 */
+	
 
-	private $results;
+	public function index() {
 
-	public function showUsers() {
-
-		// set user count
-	    $user_count = Input::get('user_count');
-
-	    $results = '';
-
-	    // process form
-	    for($i = 0; $i <= $user_count; $i++) {
-
-	        $faker = Faker::create();
-	        $results = . $faker->name() .'<br>';
-
-	        $email = Input::get('email');
-	        if(isset($_POST['email'])) {
-				$results .= . $faker->email() .'<br>';
-			}
-	        $bio = Input::get('bio');
-			if(isset($_POST['bio'])) {
-				$results .= . $faker->text() .'<br>';
-			}
-		
-	    	
-	  	}
-	  	return $results;
+		return View::make('random_users.index');
 	}
+
+	public function create() {
+		
+		$faker = Faker::create();
+		
+		$submit = Input::get('submit');
+		$user_count = Input::get('user_count');
+		$email = Input::get('email');
+		$bio = Input::get('bio');
+
+		
+
+		if ($submit) {
+			for ($i = 0; $i < $user_count; $i++) {
+				echo $faker->name;
+
+				if ($email != null) {
+					echo $faker->email;
+				}
+				if ($bio != null) {
+					echo $faker->text;
+				}
+
+				return View::make('random_users.index');
+			}
+		}
+	}
+
+	
+
+	public function getUserCount() {
+		return $user_count;
+	}
+
+
 }

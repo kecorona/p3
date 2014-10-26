@@ -73,10 +73,10 @@
 	
 @section('results')
 
-		 @if(isset($results))
-		 {{ $results }}
-		 @endif
-		 </div>
+		 
+		 {{ $user->name }}
+		
+		
 @stop
 
 

@@ -30,7 +30,7 @@
     </div>
             
 
-        <div class="uk-container" style="background-image:url('img/top_bg.png'); background-repeat: repeat-x; height:50px">
+        <div class="uk-container">
 
 
 				  @yield('content')

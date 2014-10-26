@@ -13,18 +13,14 @@
 
 Route::resource('/', 'HomeController');
 
-Route::post('/random_users', 'UserController@showUsers');
+
+Route::get('random_users', 'UserController@index');
+
+Route::post('random_users', 'UserController@create');
+
+
 
 Route::post('/lorem_ipsum', 'LoremIpsumController@showLorem');
-
-Route::get('/random_users', function() {
-	return View::make('random_users');
-});
-
-Route::post('/random_users/{results?}', function($results) {  
-    return View::make('random_users')->with('results', $results);
-
-});
 
 Route::get('/lorem_ipsum', function() {
     return View::make('lorem_ipsum');
