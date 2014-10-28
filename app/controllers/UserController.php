@@ -14,36 +14,47 @@ class UserController extends BaseController {
 	|
 	*/
 	
+	
+	protected $layout = 'random_users.index';
 
 	public function index() {
-
-		return View::make('random_users.index');
+		
+		return View::make('random_users.index')->with('user', $user);
+		
 	}
 
-	public function create() {
+	public function show() {
 		
 		$faker = Faker::create();
-		
+		$user = array();
 		$submit = Input::get('submit');
 		$user_count = Input::get('user_count');
-		$email = Input::get('email');
+		$address = Input::get('address');
 		$bio = Input::get('bio');
 
 		
 
 		if ($submit) {
 			for ($i = 0; $i < $user_count; $i++) {
-				echo $faker->name;
+				$user = $faker->name . '<br>';
 
-				if ($email != null) {
-					echo $faker->email;
+				if ($address != null) {
+					$user .= $faker->address . '<br>';
 				}
 				if ($bio != null) {
-					echo $faker->text;
+					$user .= $faker->text . '<br>';
 				}
 
-				return View::make('random_users.index');
+					return $user();
+				}
+				
+				
+				
+
+				return View::make('random_users.index')->with('user', $user);
 			}
+
+
 		}
 	}
 

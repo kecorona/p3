@@ -1,49 +1,36 @@
-@extends('layouts.default')
-
-@section('head')
-
-@stop
-
-@section('title')
-	<h1>Random User Generator</h1>
-@stop
-
-@section('content')
-	<div class="uk-container uk-text-center">
-		
-		
-		
-		<?php
+<?php
 		$faker = Faker::create();
 		
 		$submit = Input::get('submit');
 		$user_count = Input::get('user_count');
-		$email = Input::get('email');
+		$address = Input::get('address');
 		$bio = Input::get('bio');
+
+		$user = '';
 
 		
 
 		if ($submit) {
 			for ($i = 0; $i < $user_count; $i++) {
-				echo $faker->name;
+				 $name = $faker->name; 
 
-				if ($email != null) {
-					echo $faker->email;
+				if ($address != null) {
+					$address = $faker->address;
 				}
 				if ($bio != null) {
-					echo $faker->text;
+					$bio = $faker->text;
 				} 
+				 
+				$user = array($name, $address, $bio);
+
+				
 			}
+
+			
 		}
 		?>
 
-
-
-
-@stop
-
 	
-
 
 
 

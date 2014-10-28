@@ -14,9 +14,9 @@
 Route::resource('/', 'HomeController');
 
 
-Route::get('random_users', 'UserController@index');
+Route::any('random_users', 'UserController@show');
 
-Route::post('random_users', 'UserController@create');
+# Route::get('random_users', 'UserController@show');
 
 
 

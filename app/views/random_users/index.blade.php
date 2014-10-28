@@ -51,34 +51,9 @@
 @stop
 
 @section('results')
+	
+	
 
-	<?php
-		$faker = Faker::create();
-		
-		$submit = Input::get('submit');
-		$user_count = Input::get('user_count');
-		$address = Input::get('address');
-		$bio = Input::get('bio');
-
-		$user = '';
-
-		
-
-		if ($submit) {
-			for ($i = 0; $i < $user_count; $i++) {
-				 echo $faker->name . '<br>'; 
-
-				if ($address != null) {
-					echo $faker->address_formatted . '<br>';
-				}
-				if ($bio != null) {
-					echo $faker->text . '<br>';
-				} 
-				 
-				echo '<br>';
-			}
-		}
-		?>
 		
 
 @stop
