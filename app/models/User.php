@@ -1,9 +1,14 @@
 <?php
 
 
-class User extends Eloquent {
 
-	public function __construct(User $user) {
-		$this->user = $user;
-	}
+class User extends Eloquent {
+	protected $layout = 'layouts.default';
+
+	private $user;
+	
+	
+
+	
+	
 }

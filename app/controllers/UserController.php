@@ -19,50 +19,42 @@ class UserController extends BaseController {
 
 	public function index() {
 		
-		return View::make('random_users.index')->with('user', $user);
+		return View::make('random_users.index');
 		
 	}
 
-	public function show() {
-		
-		$faker = Faker::create();
-		$user = array();
-		$submit = Input::get('submit');
-		$user_count = Input::get('user_count');
-		$address = Input::get('address');
-		$bio = Input::get('bio');
-
-		
-
-		if ($submit) {
-			for ($i = 0; $i < $user_count; $i++) {
-				$user = $faker->name . '<br>';
-
-				if ($address != null) {
-					$user .= $faker->address . '<br>';
-				}
-				if ($bio != null) {
-					$user .= $faker->text . '<br>';
-				}
-
-					return $user();
-				}
-				
-				
-				
-
-				return View::make('random_users.index')->with('user', $user);
-			}
-
-
-		}
-	}
-
+	public function __construct(User $user) {
 	
+		
+		
+		$submit = Input::get('submit');
+		if ($submit) {
+			$faker = Faker::create();
+			$user = '';
+			$count = Input::get('user_count');
+			for ($i = 0; $i < $count; $i++) {
 
-	public function getUserCount() {
-		return $user_count;
+			$address = Input::get('address');
+			$bio = Input::get('bio');
+
+			$user =  $faker->name . '<br>';
+
+			if ($address != null) {
+				$user .= $faker->address . '<br>';
+			}
+			if ($bio != null) {
+				$user .= $faker->text . '<br>';
+			}	
+
+			echo $user;
+			echo '<hr>' . '<br>';
+
+			echo '<a href="random_users.index">Clear Page</a>';
+			echo '<a href="/">Home</a>';
+		}
+
 	}
 
 
+}
 }

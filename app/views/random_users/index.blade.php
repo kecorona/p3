@@ -9,6 +9,12 @@
 @stop
 
 @section('content')
+	<nav class="uk-nav">
+		<ul class="uk-subnav">
+			<li><a href="random_users">Clear</a></li>
+			<li><a href="/">Home</a></li>
+		</ul>
+	</nav>
 	<div class="uk-container uk-text-center">
 		<h1>Random User Generator</h1>
 	</div>
@@ -17,7 +23,7 @@
 		{{ Form::open(array('url'=>'random_users', 'method' => 'POST')) }}
 			<fieldset>
 			{{ Form::label('user_count', 'Number of Users: ') }}
-			{{ Form::number('user_count', '1', ['id' => 'user_count','name' => 'user_count', 'class' => 'form-control']); }}
+			{{ Form::number('user_count', '1', array('id' => 'user_count','name' => 'user_count', 'class' => 'form-control')); }}
 			</fieldset>
 
 			<fieldset>
@@ -51,9 +57,6 @@
 @stop
 
 @section('results')
-	
-	
-
 		
 
 @stop

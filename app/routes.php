@@ -14,18 +14,10 @@
 Route::resource('/', 'HomeController');
 
 
-Route::any('random_users', 'UserController@show');
+Route::post('random_users', 'UserController@index');
 
-# Route::get('random_users', 'UserController@show');
+Route::get('random_users', 'UserController@index');
 
 
-
-Route::post('/lorem_ipsum', 'LoremIpsumController@showLorem');
-
-Route::get('/lorem_ipsum', function() {
-    return View::make('lorem_ipsum');
-});
-
-Route::post('/lorem_ipsum', function() {
-    return View::make('lorem_ipsum');
-});
+Route::post('lorem_ipsum', 'LoremIpsumController@index');
+Route::get('lorem_ipsum', 'LoremIpsumController@index');

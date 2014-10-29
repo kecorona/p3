@@ -14,22 +14,34 @@ class LoremIpsumController extends BaseController {
 	|
 	*/
 
-	public function showLorem() {
 
-		// set user count
-	    $paragraph_count = Input::get('paragraph_count');
 
-	    $paragraphs = '';
+
+	public function __construct() {
+
+		$submit = Input::get('submit');
+		if ($submit) {
+	    	$paragraph_count = Input::get('paragraph_count');
+
+	    	$paragraphs = '';
 
 	    // process form
-	    for($i = 0; $i <= $paragraph_count; $i++) {
+	    for($i = 0; $i < $paragraph_count; $i++) {
+	    	$generator = new LoremIpsum();
+	    	$paragraphs = $generator->getParagraphs(1);
 
-	    	$paragraphs = . $generator->getParagraphs(1);
-
-	        
+	        echo implode ('<p>', $paragraphs);
+	        echo '<br>' . '<br>';
 		
 	  	}
 
-	  	echo implode('<p>', $paragraphs);
+	  	
+	}
+}
+
+public function index() {
+
+			
+		return View::make('lorem_ipsum.index');
 	}
 }

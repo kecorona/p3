@@ -1,37 +1,21 @@
-<?php
-		$faker = Faker::create();
-		
-		$submit = Input::get('submit');
-		$user_count = Input::get('user_count');
-		$address = Input::get('address');
-		$bio = Input::get('bio');
+@extends('layouts.default')
 
-		$user = '';
+@section('head')
 
-		
+@stop
 
-		if ($submit) {
-			for ($i = 0; $i < $user_count; $i++) {
-				 $name = $faker->name; 
+@section('title')
+	<h1>Random User Generator</h1>
+@stop
 
-				if ($address != null) {
-					$address = $faker->address;
-				}
-				if ($bio != null) {
-					$bio = $faker->text;
-				} 
-				 
-				$user = array($name, $address, $bio);
+@section('content')
 
-				
-			}
+@stop
 
-			
-		}
-		?>
+@section('results')
 
-	
+<div class="uk-container">
+	{{ $user }}
+</div>
 
-
-
-
+@stop

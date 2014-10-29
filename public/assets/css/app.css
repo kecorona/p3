@@ -1,9 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Varela+Round|Montserrat);
 
-.uk-container{
-max-width: 100% !important;
-    z-index: -9999;
+body {
+	padding-top:20px;
+	text-align: center;
+	
 }
+.uk-container{
+	max-width: 100% !important;
+    }
 .uk-container-main {
 	margin-top:15px;
 }
