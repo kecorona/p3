@@ -11,12 +11,9 @@
 		"laravelbook/ardent": "2.*",
 		"badcow/lorem-ipsum": "dev-master",
 		"way/generators": "~2.0",
-		"xi/randomstring": "dev-master"
-		
-	},
-
-	"require-dev": {
+		"xi/randomstring": "dev-master",
 		"fzaninotto/faker": "1.5.*@dev"
+		
 	},
 
 	"autoload": {
@@ -26,7 +23,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"vendor/fzaninotto/faker/src/autoload.php"
 		]
 	},
 	"scripts": {
