@@ -2,7 +2,7 @@
 
 
 
-class User extends Eloquent {
+class User {
 	protected $layout = 'layouts.default';
 
 	private $user;
