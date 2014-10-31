@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec7d1f182af5aab37a7cfc07d0de269a",
+    "hash": "5ae9fb8132a7f02b5615ee5847adc741",
     "packages": [
         {
             "name": "badcow/lorem-ipsum",
@@ -123,6 +123,50 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "time": "2014-01-17 12:21:18"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "b307f3d9ef0960b74ea8bd8d5bbdef2049368947"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/b307f3d9ef0960b74ea8bd8d5bbdef2049368947",
+                "reference": "b307f3d9ef0960b74ea8bd8d5bbdef2049368947",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2014-10-23 22:36:02"
         },
         {
             "name": "filp/whoops",
@@ -1773,7 +1817,8 @@
     "stability-flags": {
         "paste/pre": 20,
         "badcow/lorem-ipsum": 20,
-        "fzaninotto/faker": 20
+        "fzaninotto/faker": 20,
+        "ezyang/htmlpurifier": 20
     },
     "prefer-stable": false,
     "platform": [],
