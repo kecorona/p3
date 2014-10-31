@@ -34,6 +34,8 @@ require __DIR__.'/../bootstrap/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/start.php';
 
+$app = require_once __DIR__.'/../vendor/fzaninotto/faker/src/autoload.php';
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
