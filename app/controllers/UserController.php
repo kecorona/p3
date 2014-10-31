@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../vendor/fzaninotto/faker/src/autoload.php';
+require_once ('/../../vendor/fzaninotto/faker/src/autoload.php');
 
 class UserController extends BaseController {
 	/*
