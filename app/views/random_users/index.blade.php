@@ -1,7 +1,3 @@
-<?php
-require_once '../../vendor/fzaninotto/faker/src/autoload.php';
-?>
-
 @extends('layouts.default')
 
 @section('head')
