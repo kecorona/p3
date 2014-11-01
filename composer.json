@@ -8,9 +8,13 @@
 		"laravel/framework": "4.2.*",
 		"paste/pre": "dev-master",
 		"badcow/lorem-ipsum": "dev-master",
-		"fzaninotto/faker": "dev-master",
 		"ezyang/htmlpurifier": "dev-master"
 		
+	},
+	"require-dev": {
+		"way/generators": "2.*",
+        "fzaninotto/faker": "1.4.*@dev",
+        "barryvdh/laravel-debugbar": "1.*"
 	},
 
 	"autoload": {
