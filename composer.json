@@ -8,9 +8,9 @@
 		"laravel/framework": "4.2.*",
 		"paste/pre": "dev-master",
 		"badcow/lorem-ipsum": "dev-master",
-		"way/generators": "2.*",
-        "fzaninotto/faker": "dev-master",
-        "doctrine/dbal": "2.3.5"
+        "fzaninotto/faker": "1.5.x-dev",
+		"symfony/config": "~2.5",
+		"symfony/class-loader": "~2.5"
 		
 	},
 
