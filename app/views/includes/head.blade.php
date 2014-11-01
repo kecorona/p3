@@ -20,15 +20,3 @@
 <script src="assets/js/uikit.js"></script>
 <script src="assets/js/addons"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-
-<script>
-  $(function() {
-    $( "#slider" ).slider();
-  });
-</script>
-
-
-<?php
-require_once 'vendor/fzaninotto/faker/src/autoload.php';
-?>
-
