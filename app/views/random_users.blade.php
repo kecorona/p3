@@ -4,17 +4,15 @@
 
 @stop
 
+@section('header')
+
+@stop
+
 @section('title')
 	<h1>Random User Generator</h1>
 @stop
 
 @section('content')
-	<nav class="uk-nav">
-		<ul class="uk-subnav">
-			<li><a href="random_users">Clear</a></li>
-			<li><a href="/">Home</a></li>
-		</ul>
-	</nav>
 	<div class="uk-container uk-text-center">
 		<h1>Random User Generator</h1>
 	</div>
@@ -44,7 +42,6 @@
 			{{ Form::submit('Submit', array('name' => 'submit', 'class' => 'uk-button')) }}
 			</fieldset>
 
-						 
 		{{ Form::close() }}
 						
 		</form>

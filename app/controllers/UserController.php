@@ -1,5 +1,4 @@
 <?php
-require 'Faker';
 
 class UserController extends BaseController {
 	/*
@@ -16,11 +15,11 @@ class UserController extends BaseController {
 	*/
 	
 	
-	protected $layout = 'random_users.index';
+	protected $layout = 'random_users';
 
 	public function index() {
 		
-		return View::make('random_users.index');
+		return View::make('random_users');
 		
 	}
 
@@ -45,14 +44,14 @@ class UserController extends BaseController {
 			}
 			if ($bio != null) {
 				$user .= $faker->text . '<br>';
-			}	
+			}
+
 
 			echo $user;
 			echo '<hr>' . '<br>';
-
-			echo '<a href="random_users.index">Clear Page</a>';
-			echo '<a href="/">Home</a>';
 		}
+
+	
 
 	}
 

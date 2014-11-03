@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
 	@include('includes.head')
+
 </head>
+
 <body>
+@include('includes.header')
+
         <div class="uk-container">
         
         </div>

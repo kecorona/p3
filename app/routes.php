@@ -14,10 +14,10 @@
 Route::resource('/', 'HomeController');
 
 
-Route::post('random_users', 'UserController@index');
+Route::post('random_users.index', 'UserController@index');
 
-Route::get('random_users', 'UserController@index');
+Route::get('random_users.index', 'UserController@index');
 
 
-Route::post('lorem_ipsum', 'LoremIpsumController@index');
-Route::get('lorem_ipsum', 'LoremIpsumController@index');
+Route::post('lorem_ipsum.index', 'LoremIpsumController@index');
+Route::get('lorem_ipsum.index', 'LoremIpsumController@index');
