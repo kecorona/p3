@@ -6,8 +6,8 @@
 
 <title>Dev Tools</title>
 
-
-{{ HTML::style('assets/css/app.css') }}
+<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+{{ HTML::style('assets/css/style.css') }}
 {{ HTML::style('assets/css/uikit.min.css') }}
 {{ HTML::style('assets/css/uikit.css') }}
 {{ HTML::style('assets/css/uikit.gradient.css') }}

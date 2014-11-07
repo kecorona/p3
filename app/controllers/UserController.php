@@ -14,47 +14,70 @@ class UserController extends BaseController {
 	|
 	*/
 	
+		
 	
-	protected $layout = 'random_users';
-
 	public function index() {
-		
-		return View::make('random_users');
-		
-	}
 
-	public function __construct(User $user) {
-	
-		
-		
+		$view = View::make('random_users');
+
+		$user = new User();
+
 		$submit = Input::get('submit');
-		if ($submit) {
-			$faker = Faker::create();
-			$user = '';
-			$count = Input::get('user_count');
-			for ($i = 0; $i < $count; $i++) {
+		
+		$users = $user->getUsers();
 
+		
+		
+		
+
+		if (!$submit) {
+			return $view;
+		} else {
+			$count = Input::get('user_count');
+
+			for ($i = 0; $i < $count; $i++) {
+			$users = array();
+			$faker = Faker::create();
+			
 			$address = Input::get('address');
 			$bio = Input::get('bio');
 
-			$user =  $faker->name . '<br>';
+			$users[] =  $faker->name() . '<br>';
 
 			if ($address != null) {
-				$user .= $faker->address . '<br>';
+				$users[] = $faker->address() . '<br>';
 			}
 			if ($bio != null) {
-				$user .= $faker->text . '<br>';
+				$users[] = $faker->text() . '<br>';
 			}
-
-
-			echo $user;
-			echo '<hr>' . '<br>';
+			echo '<hr>';
+			foreach ($users as $user) {
+				echo $user;
+				
+			
+			}
 		}
 
+	}
+}
+
 	
+}
+
+
+
+					/*$result[] = [
+						'name' => $faker->name,
+						'address' => $faker->address,
+						'bio' => $faker->text
+						];
+				}
+			}
+				$user[] = $result;
+			}
+
+			return Response::json($user);
+		}
 
 	}
-
-
-}
-}
+}*/

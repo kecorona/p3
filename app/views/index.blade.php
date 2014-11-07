@@ -39,23 +39,13 @@
                 <h1>Lorem Ipsum Generator</h1>
                 <h5>Description</blockquote>
                 
-                <a href="lorem_ipsum.index" class="btn btn-primary btn-default">Try it out! <span class="glyphicon glyphicon-share-alt"></span></a>
+                <a href="lorem_ipsum" class="btn btn-primary btn-default">Try it out! <span class="glyphicon glyphicon-share-alt"></span></a>
             </div>
 
         </div>
     </div>
 
-    <!-- This is the off-canvas sidebar -->
-    <div id="offcanvas" class="uk-offcanvas">
-            <div class="uk-offcanvas-bar">
-
-                <ul class="uk-nav uk-nav-offcanvas">
-                    <li><a href="random_users.index"><span>Random User Generator</span></a></li>
-                    <li id="lorem_ipsum.index"><a href=""><span>Lorem Ipsum Generator</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    
 
 @stop
 

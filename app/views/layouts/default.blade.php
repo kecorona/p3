@@ -6,18 +6,20 @@
 </head>
 
 <body>
-@include('includes.header')
 
-        <div class="uk-container">
+<div class="uk-container">
+
+	<div class="uk-grid">
+
+		<div class="uk-width-3-10">
         
+        	@include('includes.header')
+
         </div>
 
-        <div class="uk-container">
-
+        <div class="uk-width-7-10">
 
 				  @yield('content')
-
-                  @yield('results')
 
 	       </div>
 

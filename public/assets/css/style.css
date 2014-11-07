@@ -4,15 +4,15 @@ body {
 	text-align: center;
 }
 .uk-container{
-max-width: 100% !important;
+	max-width: 100% !important;
     z-index: -9999;
 }
-.uk-container-main {
+.uk-container {
 	margin-top:15px;
 }
 .uk-grid>* {
 	margin:0 0 0 0px;
-	padding-left:22px;
+
 	
 }
 
@@ -22,71 +22,45 @@ max-width: 100% !important;
 	border-right:1px solid #dddddd;
 }
 
+.uk-nav-header {
+	padding-left:0px !important;
+}
+.uk-nav-header a {
+	padding-top:0;
+	padding-left:0px;
+	position: fixed;
+	
 
+}
 
-.uk-navbar-nav li {
-	display:inline-block;
-    width:auto;
-    text-align:right;
+.uk-nav li {
+	margin-left: 0px;
+	padding-top: 15px;
+	
     
     
 }
 
-.uk-navbar-nav li a {
+.uk-nav li a {
+
 	font-family: 'Montserrat', sans-serif;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	color:#4f4f4f;
-	text-align: center;
+	text-align: left;
 	font-size:1em;
-    border-left: 0px transparent;
-    border-right: 0px transparent;
-    display:block;
+   
 
 
 }
 
-.uk-navbar-nav li a:hover,
-.uk-navbar-nav li a:active
-.uk-navbar-nav li a:focus,
-.uk-navbar-nav li.uk-active a {
+.uk-nav li a:hover,
+.uk-nav li a:active
+.uk-nav li a:focus,
+.uk-nav li.uk-active a {
 	background:transparent;
 	color:#a41034;
 	
 }
-
-.uk-nav-img {
-	max-width: 300px;
-	display:block;
-	padding-top:10px;
-	margin-bottom:5px;
-
-
-}
-
-.uk-nav-toggle:after {
-  content: "\f0c9";
-  font-family: FontAwesome;
-  /* 1 */
-}
-
-.uk-nav-offcanvas li {
-	width:100%;
-	font-family: 'Montserrat', sans-serif;
-	color:#d4d4d4;
-	
-	
-
-}
-
-.uk-header {
-	margin-top:15px;
-	padding-top: 15px;
-}
-.uk-nav-offcanvas li a {
-	text-align: left;
-	color:#d4d4d4;
-}
-
 
 .uk-main {
 	margin:0 5%;
@@ -94,23 +68,6 @@ max-width: 100% !important;
 	text-align: left;
 }
 
-
-
-.uk-thumbnail-right {
-	margin-left: 5px;
-
-}
-
-.uk-thumbnail-left {
-	padding-right:5px;
-
-
-}
-
-.uk-thumbnail-center {
-	padding-right: 5px;
-	padding-left: 5px;
-}
 
 .uk-article p {
 	font-family: 'Montserrat', sans-serif;
@@ -131,9 +88,6 @@ max-width: 100% !important;
 	font-weight:normal;
 }
 
-.uk-subnav, .uk-subnav-pill {
-	color:#900000;
-}
 
 
 

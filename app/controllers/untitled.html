@@ -1,0 +1,119 @@
+<?php
+
+class UserController extends BaseController {
+	/*
+	|--------------------------------------------------------------------------
+	| User Controller
+	|--------------------------------------------------------------------------
+	|
+	| You may wish to use controllers instead of, or in addition to, Closure
+	| based routes. That's great! Here is an example controller method to
+	| get you started. To route to this controller, just add the route:
+	|
+	|	Route::get(pages.random_users', 'UserController@show');
+	|
+	*/
+	
+
+
+	
+	protected $layout = 'random_users';
+	
+	public function index() {
+		
+		//return View::make('random_users')->with('user', $user);
+		
+
+		$users = array();
+		return View::make('random_users')->with('json', $this->create('display_json'))
+										 ->with('text' $this->create('display_text')
+										 ->with('result', $users);
+
+		
+	
+	}
+
+	public function show() {
+		for($i = 0; $i < $count; $i++) {
+			
+			$user = new User($name, $address, $bio);
+
+			switch($format) {
+				
+				case 'text':
+					array_push($result, $user->display_text);
+					break;
+				case 'json':
+					array_push($result, $user->display_json);
+					break;
+			}
+			return View::make('random_users')->with('users', $this->create('json'))
+										 	 ->with('result', $result);
+		}
+	}
+	
+	/**
+	** @return array $user
+	** 
+	**/
+
+	public function create() {
+
+		
+		$faker = Faker::create();
+		$submit = Input::get('submit');
+	    $count = Input::get('user_count');
+		$address = Input::get('address');
+		$bio = Input::get('bio');
+
+		$user = new User();
+		if(isset($submit)) {
+			
+			for($i = 0; $i < $count; $i++) {
+				
+				$user[$i] = array();
+
+				$name = $faker->name;
+
+				if(!is_null($address)) {
+					$address = $faker->address;
+				}
+				if(!is_null($bio)) {
+					$bio = $faker->text;
+				}
+
+				$user[$i] = ['name' => $name,
+							  'address' => $address,
+							  'bio' => $bio];
+				
+			}
+
+			
+			for ($n = 0; $n < count($users); $n++) {
+				return $user->display_json();
+
+			}
+		
+		}
+	}
+
+}
+
+
+
+					/*$result[] = [
+						'name' => $faker->name,
+						'address' => $faker->address,
+						'bio' => $faker->text
+						];
+				}
+			}
+				$user[] = $result;
+			}
+
+			return Response::json($user);
+		}
+
+	}
+}*/
+	

@@ -42,6 +42,6 @@ class LoremIpsumController extends BaseController {
 public function index() {
 
 			
-		return View::make('lorem_ipsum.index');
+		return View::make('lorem_ipsum');
 	}
 }

@@ -12,7 +12,7 @@ body {
 }
 .uk-grid>* {
 	margin:0 0 0 0px;
-	padding-left:22px;
+
 	
 }
 
@@ -24,7 +24,7 @@ body {
 
 
 
-.uk-navbar-nav li {
+.uk-nav-sub ul {
 	display:inline-block;
     width:auto;
     text-align:right;
@@ -32,7 +32,7 @@ body {
     
 }
 
-.uk-navbar-nav li a {
+.uk-nav li a {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: lowercase;
 	color:#4f4f4f;
