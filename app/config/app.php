@@ -28,7 +28,6 @@ return array(
 
 	'url' => 'http://localhost',
 
-
 	/*
 	|--------------------------------------------------------------------------
 	| Application Timezone
@@ -79,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'Mn0zDyVHPSiQpq85rjvOltz7Zk77Fpto',
+	'key' => 'YourSecretKey!!!',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -122,8 +121,6 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-		'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -175,7 +172,6 @@ return array(
 		'Input'             => 'Illuminate\Support\Facades\Input',
 		'Lang'              => 'Illuminate\Support\Facades\Lang',
 		'Log'               => 'Illuminate\Support\Facades\Log',
-		'Lorem_Ipsum'	  	=> 'Badcow\LoremIpsum\Generator',
 		'Mail'              => 'Illuminate\Support\Facades\Mail',
 		'Paginator'         => 'Illuminate\Support\Facades\Paginator',
 		'Password'          => 'Illuminate\Support\Facades\Password',

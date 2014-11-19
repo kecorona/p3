@@ -26,8 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('*'),
-	'production' => array('kcorona'),
+	'local' => array('homestead'),
 
 ));
 
@@ -59,8 +58,6 @@ $framework = $app['path.base'].
                  '/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
-
-
 
 /*
 |--------------------------------------------------------------------------
