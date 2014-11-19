@@ -13,27 +13,81 @@ class UserController extends BaseController {
 	|	Route::get(pages.random_users', 'UserController@show');
 	|
 	*/
+
 	
 		
 	
 	public function index() {
 
-		$view = View::make('random_users');
-
-		$user = new User();
-
-		$submit = Input::get('submit');
+		return View::make('random_users');
+	}		
 		
-		$users = $user->getUsers();
+	public function genUsers(){
 
+		$min = 0;
+		$max = 100;
 		
-		
-		
+		$data = Input::all();
+		$results = '';
+		$user_count = 0;
 
-		if (!$submit) {
-			return $view;
+		if(array_key_exists('user_count', $data)) {
+			$user_count = $data['user_count'];
+		}
+
+		$faker = Faker::create();
+
+		if(isset($user_count) && $user_count > $min && $user_count < $max) {
+			for ($i = 0; $i < $user_count; $i++) {
+				if(array_key_exists('title', $data)) {
+					$results[$i]['title'] = $faker->title($gender = null|'male'|'female');
+				}
+				if(array_key_exists('firstName', $data)) {
+					$results[$i]['firstName'] = $faker->firstName($gender = null|'male'|'female');
+				}
+				if(array_key_exists('lastName', $data)) {
+					$results[$i]['lastName'] = $faker->lastName;
+				}
+				if(array_key_exists('suffix', $data)) {
+					$results[$i]['suffix'] = $faker->suffix;
+				}
+				if(array_key_exists('address', $data)) {
+					$results[$i]['address'] = $faker->streetAddress . '<br>' .
+											  $faker->city . ', ' .
+											  $faker->stateAbbr . ' ' .
+											  $faker->postcode;
+				}
+				if(array_key_exists('bio', $data)) {
+					$results[$i]['bio'] = $faker->text();
+				}
+			}
 		} else {
+			$results = "Something's wrong here... try entering a number";
+			Session::flash('results', $results);
+		}
+
+		if(Request::ajax()) {
+			// ajax content
+			return View::make('random_users')->with(compact('results'))
+										   ->with(compact('data'));
+		} else {
+
+			return View::make('random_users')->with(compact('results'))
+										   ->with(compact('data'));		
+		}
+	}
+}
+
+		/*
+		$submit = Input::get('submit');
+		if ($submit) {
+			return View::make('show_users')->with('users', $users)
+											 ->with('user', $user);
+		
 			$count = Input::get('user_count');
+			$user = new User();
+			$user->setPath(app_path());
+			$users = $user->getUsers();
 
 			for ($i = 0; $i < $count; $i++) {
 			$users = array();
@@ -50,10 +104,10 @@ class UserController extends BaseController {
 			if ($bio != null) {
 				$users[] = $faker->text() . '<br>';
 			}
-			echo '<hr>';
-			foreach ($users as $user) {
-				echo $user;
-				
+			echo Pre::render($users);
+			
+			
+
 			
 			}
 		}
@@ -62,8 +116,7 @@ class UserController extends BaseController {
 }
 
 	
-}
-
+*/
 
 
 					/*$result[] = [

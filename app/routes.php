@@ -12,13 +12,12 @@
 */
 
 Route::resource('/', 'HomeController');
-
 Route::resource('random_users', 'UserController');
+Route::resource('lorem_ipsum', 'LoremIpsumController');
 
-
-Route::any('random_users', 'UserController@index');
-
-
+Route::post('random_users', 'UserController@index');
+Route::get('random_users', 'UserController@genUsers');
 
 Route::post('lorem_ipsum', 'LoremIpsumController@index');
-Route::get('lorem_ipsum', 'LoremIpsumController@index');
+Route::get('lorem_ipsum', 'LoremIpsumController@genLorem');
+

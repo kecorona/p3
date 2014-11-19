@@ -1,51 +1,40 @@
-@extends('layouts.default')
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
 
-@section('content')
+<body style="padding-bottom: 0px !important">
+    @extends('layouts.default') 
+    @section('content')
 
-<button class="uk-button" data-uk-offcanvas="{target:'#panel'}">P3</button>
-
-<div class="uk-container uk-text-center">
-    <div class="uk-article uk-article-header">
-        <div class="uk-article uk-article-header">
-            <h1>Project 3: Developers Best Friend</h1>
-            <div class="uk-grid">
-                <div class="uk-width-1-2 uk-text-center">
-                    <a class="uk-icon-github uk-icon-large" href="http://www.github.com/kecorona/p3"> Github Docs</a>
-                </div>
-                <div class="uk-width-1-2 uk-text-center">
-                    <a class="uk-icon-heart uk-icon-large" href="http://www.kristincorona.com"> kristincorona.com</a>
-                </div>
-            </div>
-        </div>
-        <div class="uk-article uk-article-content">
-            
-            
-        </div>
-        
-    </div>
-</div>
-
-    <div class="uk-container">
-        <div class="uk-grid uk-grid-divider">
-        
-            <div class="uk-width-1-2 uk-text-center">
-                <h1>Random User Generator</h1>
-                <h>Description</h5>
-                
-                <a href='random_users.index' class="btn btn-primary btn-default"> Try it out! <span class="glyphicon glyphicon-share-alt"></span></a>
-            </div>
-
-            <div class="uk-width-1-2 uk-text-center">
-                <h1>Lorem Ipsum Generator</h1>
-                <h5>Description</blockquote>
-                
-                <a href="lorem_ipsum" class="btn btn-primary btn-default">Try it out! <span class="glyphicon glyphicon-share-alt"></span></a>
-            </div>
-
-        </div>
+    <div class="uk-text-center">
+        <h1 class="uk-header">Developer's Best Friend</h1>
     </div>
 
-    
+    <hr class="uk-grid-divider">
 
-@stop
+    <div class="uk-width-medium-1-2 uk-text-center">
+        <panel class="uk-panel">
+        <h1 class="uk-panel-title">Random User Generator</h1>
 
+        <p class="uk-panel-content">Generate a list of users made up of randomly chosen first names, last names, street addresses, and lorem ipsum placeholder content for the user'sprofile.</p>
+        
+        <a class="btn btn-primary btn-default" href='random_users'>Try it out! 
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </a> 
+        </panel>
+    </div>
+
+    <div class="uk-width-medium-1-2 uk-text-center">
+    <panel class="uk-panel">
+        <h1 class="uk-panel-title">Lorem Ipsum Generator</h1>
+
+        <p class="uk-panel-content">Generate 'Lorem Ipsum' dummy text. Enter a specified number of paragraphs and watch the magic happen.</p>
+        <a class="btn btn-primary btn-default" href="lorem_ipsum">Try it out! <span class="glyphicon glyphicon-share-alt"></span></a>
+    </panel>
+    </div>
+
+    @stop
+</body>
+</html>

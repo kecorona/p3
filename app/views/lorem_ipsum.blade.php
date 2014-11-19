@@ -9,47 +9,72 @@
 @stop
 
 @section('content')
-	<div class="uk-container uk-text-center">
-		<h1>Lorem Ipsum Generator</h1>
-	</div>
-	<nav class="uk-nav">
-		<ul class="uk-subnav">
-			<li><a href="lorem_ipsum">Clear</a></li>
-			<li><a href="/">Home</a></li>
-		</ul>
-	</nav>
 
-	<div class="uk-container">
-		<form class="uk-form">
-		{{ Form::open(array('url'=>'lorem_ipsum', 'method' => 'POST')) }}
-			<div class="uk-grid" data-uk-grid-margin>
+<div class="uk-text-center ">
+	<h1 class="uk-header">Lorem Ipsum Generator</h1>
+	<caption>Generate 'lorem ipsum' style paragraphs.</caption>
+</div>
 
-				<div class="uk-width-1-1">
-					<fieldset data-uk-margin>
-						<legend>Number of Paragraphs</legend>
-						{{ Form::label('paragraph_count', '',['name' => 'paragraph_count', 'class' => 'uk-form-control'])}}
-						{{ Form::number('paragraph_count', '1', ['name' => 'paragraph_count']); }}
-					</fieldset>
-
-
-				</div>
-
-				<div class="uk-width-1-1">
-					<fieldset data-uk-margin>
-						<div class="uk-form-row uk-form-control">
-						
-						{{ Form::token() }}
-						{{ Form::submit('Submit', array('name' => 'submit', 'class' => 'uk-button')) }}
-
-						 
-						{{ Form::close() }}
-						</div>
-					</fieldset>
-				</div>
-
-			</div>
-		</form>
-
+<hr class="uk-grid-divider">
+<div class="uk-grid">
+		
+	<div class="uk-width-medium-1-2">
+		
+		<form class="uk-form uk-form-horizontal">
 	
-	</div>
+		{{ Form::open(array(
+							'url'=>'lorem_ipsum', 
+							'method' => 'GET')) }}
+					
+			<div class="uk-form-row">
+				<fieldset id='li_form'>
+					<label class="uk-form-label">Number of Paragraphs</label>
+					
+
+					<div class="uk-form-controls">
+					
+						{{ Form::number('paragraph_count', '1', array('id' => 'paragraph_count', 'name' => 'paragraph_count', 'class' => 'uk-width-1-1')); }}
+						{{ Form::label('', '')}}
+
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="uk-form-row uk-final-row">
+				
+				<fieldset id="submit" class="uk-button">
+					{{ Form::submit('submit', array('id' => 'submit', 'class' => 'uk-button uk-responsive-width btn-submit')) }}			
+				</fieldset>
+			
+			</div>
+					
+			{{ Form::close() }}
+
+		</form>
+		
+		</div>
+
+		<div class="uk-width-medium-1-2 uk-scrollable-text" id="results">
+
+	   		@if(isset($results))
+	   			@if(is_array($results))
+	   				@foreach($results as $returndata)
+		   				@if(isset($data))
+			   			
+			   				<p>
+			                    <xmp></xmp>
+			                     <p> {{ $returndata }}</p>
+			                    <xmp></xmp>
+			                </p>
+			                
+		                @else
+		                    <p>{{ $returndata }}</p>
+		                @endif
+		       			
+	       			@endforeach
+       			@endif
+       		@endif
+
+		</div>
+</div>
 @stop
