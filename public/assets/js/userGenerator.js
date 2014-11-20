@@ -1,4 +1,4 @@
-$(document).ready(function() {
+(function($) {
     $("#submit").click(function() {
         
         // Send form variables via JSON

@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
+@extends('layouts.default')
 
-<body style="padding-bottom: 0px !important">
-    @extends('layouts.default') 
-    @section('content')
+@section('head')
 
-    <div class="uk-text-center">
+@stop
+
+@section('title')
+    <h1>Developer's Best Friend</h1>
+@stop
+
+@section('content')
+
+<div class="uk-text-center">
         <h1 class="uk-header">Developer's Best Friend</h1>
     </div>
 
