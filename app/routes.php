@@ -11,7 +11,7 @@
 |
 */
 
-Route::controller('/', 'HomeController');
+Route::resource('/', 'HomeController');
 Route::controller('random_users', 'UserController');
 Route::controller('lorem_ipsum', 'LoremIpsumController');
 
