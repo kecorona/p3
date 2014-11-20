@@ -11,9 +11,9 @@
 |
 */
 
-Route::resource('/', 'HomeController');
-Route::resource('random_users', 'UserController');
-Route::resource('lorem_ipsum', 'LoremIpsumController');
+Route::controller('/', 'HomeController');
+Route::controller('random_users', 'UserController');
+Route::controller('lorem_ipsum', 'LoremIpsumController');
 
 Route::post('random_users', 'UserController@index');
 Route::get('random_users', 'UserController@genUsers');
