@@ -17,12 +17,12 @@ class UserController extends BaseController {
 	
 		
 	
-	public function index() {
+	public function getIndex() {
 
 		return View::make('random_users');
 	}		
 		
-	public function genUsers(){
+	public function getUsers(){
 
 		$min = 0;
 		$max = 100;

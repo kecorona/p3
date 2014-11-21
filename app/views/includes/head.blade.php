@@ -15,6 +15,7 @@
   <script src="assets/js/userGenerator.js"></script> 
   <script src="assets/js/loremGenerator.js"></script> 
   <script src="assets/js/uikit.min.js"></script> 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'>
+    </script>
 
   <script src="assets/js/jquery.js"></script>

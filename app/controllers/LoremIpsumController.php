@@ -19,12 +19,12 @@ class LoremIpsumController extends BaseController {
 		$this->loremIpsum=$loremIpsum;
 	}
 
-	public function index() {
+	public function getIndex() {
 			
 		return View::make('lorem_ipsum');
 	}
 
-	public function genLorem() {
+	public function getLorem() {
 
 		$data = Input::all();
 		$results = '';
